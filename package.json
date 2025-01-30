@@ -1,0 +1,40 @@
+{
+	"name": "cache-func",
+	"version": "1.0.0",
+	"description": "A utility to cache the result of a function",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "tsx --watch src/index.ts",
+		"build": "rm -rf dist && tsup src/index.ts --format esm --dts",
+		"build:watch": "rm -rf dist && tsup src/index.ts --watch --format esm --dts",
+		"release": "npm run build && npm publish"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"cache",
+		"function",
+		"caching",
+		"memoization",
+		"memoize",
+		"cache function",
+		"cache function result"
+	],
+	"author": "LacheRo`",
+	"license": "MIT",
+	"type": "module",
+	"devDependencies": {
+		"@types/node": "^22.12.0",
+		"tsup": "^8.3.6",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lacherogwu/cache-func"
+	}
+}
