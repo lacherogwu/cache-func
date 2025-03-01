@@ -1,6 +1,6 @@
 # cache-func
 
-A utility to cache the result of a function.
+A tiny utility to cache function outputs easily.
 
 ## Installation
 
