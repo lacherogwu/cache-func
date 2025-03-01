@@ -1,6 +1,6 @@
 {
 	"name": "cache-func",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A utility to cache the result of a function",
 	"main": "dist/index.js",
 	"scripts": {
