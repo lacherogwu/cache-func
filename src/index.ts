@@ -1,9 +1,9 @@
-const cache = new WeakMap();
 export function cacheFunc<T extends (...args: any[]) => any>(fn: T): T {
+	let val: any;
 	return ((...args: Parameters<T>): ReturnType<T> => {
-		if (!cache.has(fn)) {
-			cache.set(fn, fn(...args));
+		if (val === undefined) {
+			val = fn(...args);
 		}
-		return cache.get(fn);
+		return val;
 	}) as T;
 }
