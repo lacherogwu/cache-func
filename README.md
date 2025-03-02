@@ -19,7 +19,9 @@ function expensiveCalculation() {
 	return 42;
 }
 
-const cachedCalculation = cacheFunc(expensiveCalculation);
+const cachedCalculation = cacheFunc(expensiveCalculation, {
+	maxAge: 5 * 60 * 1000, // Cache for 5 minutes
+});
 
 console.log(cachedCalculation()); // Logs "Calculating..." and then "42"
 console.log(cachedCalculation()); // Logs "42" without recalculating
@@ -27,7 +29,7 @@ console.log(cachedCalculation()); // Logs "42" without recalculating
 
 ## API
 
-### `cacheFunc(fn: Function): Function`
+### `cacheFunc(fn: Function, options?: { maxAge?: number }): Function`
 
 Wraps a function fn and returns a new function that caches the result of fn's first call and returns the cached result on subsequent calls.
 
