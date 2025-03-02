@@ -1,6 +1,6 @@
 {
 	"name": "cache-func",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A tiny utility to cache function outputs easily",
 	"main": "dist/index.js",
 	"scripts": {

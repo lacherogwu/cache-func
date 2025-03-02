@@ -14,6 +14,7 @@ npm i cache-func
 import { cacheFunc } from 'cache-func';
 
 function expensiveCalculation() {
+	// it could be here anything here, like a long loop, a network request, etc.
 	console.log('Calculating...');
 	return 42;
 }
